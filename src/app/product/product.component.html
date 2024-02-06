@@ -1,0 +1,16 @@
+<p>product works!</p>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col" *ngFor="let p of data">
+<a [routerLink]="['/details' ,p.id]">
+
+    <img src={{p.path}} >
+</a>
+            <!-- <h4>id:{{p.id}}</h4>
+            <h4>name-{{p.name}}</h4>
+            <h4>price-{{p.price}}</h4> -->
+        </div>
+    </div>
+</div>

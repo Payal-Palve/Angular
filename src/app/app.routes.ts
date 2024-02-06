@@ -1,16 +1,17 @@
 import { Routes } from '@angular/router';
-import { FruitModule } from './fruit/fruit.module';
-import { HomeComponent } from './fruit/home/home.component';
-import { RouterModule } from '@angular/router';
-import { CreateComponent } from './fruit/create/create.component';
-import { EditComponent } from './fruit/edit/edit.component';
+import { AdministratorComponent } from './administrator/administrator.component';
+import { DetailsComponent } from './details/details.component';
 
+
+import { ProductComponent } from './product/product.component';
 
 export const routes: Routes = [
-     {path:'fruit/home',component:HomeComponent},
-    {path:'fruit' ,redirectTo:'fruit/home',pathMatch:'full'},
-    {path:'fruit/create',component:CreateComponent},
-    {path:'fruit/edit/:id',component:EditComponent},
+    {path:"product",component:ProductComponent},
+    {path:"admin",component:AdministratorComponent},
+    {path:"details/:product.id",component:DetailsComponent},//routing with parameter
+    {path:" ",redirectTo:"home",pathMatch:'full'}
    
-    {path:'',redirectTo:'fruit/home' ,pathMatch:'full'}
+  
+  
+    // {path:"addproduct",component:AdminComponent}
 ];
