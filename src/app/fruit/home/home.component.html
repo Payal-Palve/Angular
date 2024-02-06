@@ -1,0 +1,27 @@
+<div class="container-fluid p-3 fw-bold">
+    <table class="table">
+        <thead class=" table table-danger">
+            <tr>
+                <th class="">ID</th>
+                <th class="">Name</th>
+
+                <th class="">price</th>
+                <th>edit</th>
+                <th>delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of allfruits">
+                <td>{{p.id}}</td>
+                <td>{{p.name}}</td>
+
+                <td>{{p.price}}</td>
+                <td><a class="btn btn-warning " [routerLink]="['/fruit/edit',p.id]">Edit</a></td>
+                <td><button class="btn btn-danger " (click)="deleteItem(p.id)">delete</button></td>
+
+
+
+            </tr>
+        </tbody>
+    </table>
+</div>
